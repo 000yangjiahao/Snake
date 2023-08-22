@@ -1,0 +1,33 @@
+﻿<Window x:Class="SnakeRemake.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SnakeRemake.Views"
+        mc:Ignorable="d"
+        Title="Main" Height="600" Width="400">
+    <Grid>
+        <Grid.Background >
+            <ImageBrush ImageSource="\images\云朵背景图.jpg" />
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Center" Margin="0,103,0,0" TextWrapping="Wrap" Text="Snake" VerticalAlignment="Top" Height="118" Width="274" Cursor="None" FontFamily="Mistral" TextTrimming="CharacterEllipsis" FontSize="90" FontWeight="Bold" FontStyle="Italic" Block.TextAlignment="Center" OpacityMask="Black">
+        </TextBlock>
+        <Button x:Name="Start" Content="Start" HorizontalAlignment="Center" VerticalAlignment="Center" Height="96" Width="180" FontSize="90" FontFamily="Mistral">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="StartRanking" Content="Ranking" HorizontalAlignment="Center" Margin="0,362,0,0" VerticalAlignment="Top" Height="73" Width="180" FontFamily="Mistral" FontSize="60">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
