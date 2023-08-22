@@ -68,6 +68,8 @@ jobs:
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.1
+      with: 
+        msbuild-architecture: x64
 
     - name: Restore the application
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
@@ -75,7 +77,7 @@ jobs:
         Configuration: ${{ matrix.configuration }}
         
     - name: Build solution
-      run: msbuild $env:Solution_Name /t:Build -property:Configuration=$env:Configuration -property:Platform="Any CPU"
+      run: msbuild $env:Solution_Name /t:Build /p:Configuration=$env:Configuration
       
     - name: Zip the Build
       run: zip -r release.zip /bin/$env:Configuration/
