@@ -75,7 +75,7 @@ jobs:
         Configuration: ${{ matrix.configuration }}
         
     - name: Build solution
-      run: msbuild $env:Solution_Name /t:Build /p:Configuration=$env:Configuration
+      run: msbuild $env:Solution_Name /t:Build /p:Configuration=$env:Configuration /p:Platform="Any CPU"
       
     - name: Zip the Build
       run: zip -r release.zip /bin/$env:Configuration/
