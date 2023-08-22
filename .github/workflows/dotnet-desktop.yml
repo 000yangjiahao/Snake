@@ -38,8 +38,7 @@
 
 name: .NET Core Desktop
 
-on:
-  workflow_dispatch:
+on: [push]
 
 jobs:
 
