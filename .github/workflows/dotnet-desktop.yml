@@ -68,7 +68,10 @@ jobs:
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.1
-
+      
+    - name: Restore NuGet packages
+      run: nuget restore SnakeRemake.sln
+      
     - name: Restore the application
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration="Release"
       env:
