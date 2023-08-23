@@ -1,9 +1,10 @@
 # SnakeEat
 1. MVVM框架的搭建
-在开发初期因为对MVVM框架一知半解，导致MVVM框架结构混乱，代码编写到ChangeDirection（）方法时就已经编写不下来了，然后是重新学习了MVVM的基础知识，做了一遍教程上的案例，一个简单的客户提交订单的系统，学习网址是https://www.tutorialspoint.com/mvvm/index.htm。在这次学习中，我认识到了正确的MVVM框架的雏形应该是怎么样的，学习了包括但不限于数据绑定，命令绑定，各种控件的使用知识。而后学习了MVVM框架的轻量化框架Calibrun.Mirco（以下简称CM），CM使用了先VM再V的思想，使用命名绑定的方法减轻了大量绑定方面的难度。
+在开发初期因为对MVVM框架一知半解，导致MVVM框架结构混乱，代码编写到ChangeDirection（）方法时就已经编写不下来了，然后是重新学习了MVVM的基础知识，做了一遍教程上的案例，一个简单的客户提交订单的系统，学习网址是https://www.tutorialspoint.com/mvvm/index.htm。
+在这次学习中，我认识到了正确的MVVM框架的雏形应该是怎么样的，学习了包括但不限于数据绑定，命令绑定，各种控件的使用知识。而后学习了MVVM框架的轻量化框架Calibrun.Mirco（以下简称CM），CM使用了先VM再V的思想，使用命名绑定的方法减轻了大量绑定方面的难度。
 最终我使用了3个Model：Snake，Cloud，Ranking，3个V：GameView，MainView，RankingView和对应的3个VM：GameViewModel，MainViewModel，RankingViewModel。其中MainViewModel代替了原先WPF MainWindow的工作，GameViewModel整合了Snake和Cloud的数据，提供给GameView。Ranking，RankingViewModel和RankingView也是一样的关系。
 [图片]
-2. 游戏本身的开发
+3. 游戏本身的开发
 2.1 编写3个Model
   创建3个类命名为Snake，Cloud，Ranking，并添加需要的属性。
 ```C#
