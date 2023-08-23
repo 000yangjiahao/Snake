@@ -80,17 +80,8 @@ jobs:
     - name: Build solution
       run: msbuild $env:Solution_Name /t:Build /p:Configuration="Release"
       
-    - name: Install 7-Zip
-      run: |
-        # Download 7-Zip
-        Invoke-WebRequest -Uri https://www.7-zip.org/a/7z2103-x64.exe -OutFile 7z.exe
-    
-        # Install 7-Zip silently
-        Start-Process -Wait -FilePath .\7z.exe -ArgumentList "/S"
-
-    - name: Create release.zip
-      run: |
-        7z a -r release.zip /bin/$env:Configuration/
+    - name: Zip the Build
+      run: Compress-Archive -Path ./bin/Release/*.* ./release.zip
       
     - uses: actions/upload-artifact@v3
       with:
