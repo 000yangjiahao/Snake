@@ -163,6 +163,8 @@ namespace SnakeRemake.ViewModels
         }
         private void UpdateCloud()
         {
+            occupiedPositions.Clear();
+
             foreach (var snakePart in SnakeParts)
             {
                 occupiedPositions.Add(snakePart.SnakePosition);
